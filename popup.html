@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pls</title>
+	<style>
+		body{
+			background-image: url('http://ttv-backgroundart.s3.amazonaws.com/404_backgroundart.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			background-attachment: initial;
+			min-width: 400px;
+        	min-height: 205px;
+        	overflow-y: scroll;
+
+		}
+		.Container{
+			background-color: rgba(100, 0, 164, .5);
+		}
+		.Channel{
+			margin-bottom: 1em;
+		}
+		.Channel-name{
+			color: white;
+		}
+		.Channel-stream-name{
+			color: grey;
+		}
+		.Channel-txt{
+			font-size: 1.5em;
+		}
+		.Channel-logo{
+			width: 100px;
+		}
+		.Channel-logo-img{
+			border-radius: 50%;
+			width: 100%;
+		}
+		.Title{
+			color: #64459B;
+			font-size: 3em;
+		}
+		.u-fontsize{
+			font-size: 1.5em
+		}
+		.u-center{
+			text-align: center;
+			margin: 0 auto;
+		}
+		.u-displayblock{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<header class="Header">
+		<h1 class="Title u-center">
+			Live Channels!
+		</h1>
+	</header>	
+	<section class="Container u-center">
+		<div class="Channel">
+			<template id="myTemplate">
+				<figure class="Channel-logo u-center">
+					<img src="" alt="" class="Channel-logo-img">
+				</figure>
+				<div class="Channel-info">
+					<a id="channelLink">
+						<span class="Channel-name Channel-txt u-displayblock u-center" id="streamerName"> 
+						</span>
+					</a>
+					<span class="Channel-stream-name Channel-txt u-displayblock u-center" id="gameName"></span>
+				</div>
+			</template>
+		</div>
+	</section>
+	<script src="libs/jquery.js"></script>
+	<script src="popup.js"></script>
+</body>
+</html>

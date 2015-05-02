@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitch Notifications",
+  "permissions": ["http://*.twitch.tv/"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://api.twitch.tv; object-src 'self'",
+  "description": "Get notified when your fav streamers are on",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background":{
+       "page": "background.html"
+  },
+  "permissions":[
+    "notifications"
+  ],
+  "icons": { 
+    "16": "icon.png"
+    // "128": "icon128.png" 
+  }
+}
