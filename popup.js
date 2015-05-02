@@ -1,6 +1,5 @@
 var bg = chrome.extension.getBackgroundPage();
 
-console.log(bg.gameArray)
 var template = document.querySelector('#myTemplate');
 for(var i = 0; i<bg.nameArray.length; i++){
 	template.content.querySelector('img').src = bg.logoArray[i];

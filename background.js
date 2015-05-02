@@ -1,3 +1,5 @@
+function start(){
+
 var following = "https://api.twitch.tv/kraken/users/ederyairr/follows/channels?callback=?"
 var nameArray = [];
 var logoArray = [];
@@ -25,21 +27,20 @@ $.getJSON(following)
 				      priority: 1,
 				      iconUrl: 'icon.png'
 				    };
-				    
-				   
  					nameArray.push(nameStreamer);
  					gameArray.push(gameStream);
  					logoArray.push(logoStreamer);
  					urlArray.push(linkStreamer);
   		
- 					for(var i = 0; i<nameArray.length; i++){
- 						console.log(nameArray.length)
-	  					opt['message'] = nameArray[i] + message;
-	  					chrome.notifications.create('id', opt, function(id){})
-	  					
+ 					for(var j = 0; j<nameArray.length; j++){
+	  					opt['message'] = nameArray[j] + message;
+	  					chrome.notifications.create('', opt, function(id){console.log("Last error:", chrome.runtime.lastError);});
+
  					}
  				}
  				
  			})
  		}
  	});
+}
+setInterval(start,1000)
