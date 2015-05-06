@@ -26,6 +26,7 @@
 		}
 		.Channel-stream-name{
 			color: grey;
+			padding: 1em;
 		}
 		.Channel-txt{
 			font-size: 1.5em;
@@ -36,6 +37,13 @@
 		.Channel-logo-img{
 			border-radius: 50%;
 			width: 100%;
+		}
+		.Form-input{
+			font-size: 2em;
+			margin: 2em 0;
+		}
+		.Form-submit{
+			font-size: 2em;
 		}
 		.Title{
 			color: #64459B;
@@ -60,6 +68,10 @@
 		</h1>
 	</header>	
 	<section class="Container u-center">
+		<form action="" class="Form" >
+			<input type="text" placeholder="Twitch username" class="Form-input">
+			<button class="Form-submit">Submit</button>
+		</form>
 		<div class="Channel">
 			<template id="myTemplate">
 				<figure class="Channel-logo u-center">
@@ -70,7 +82,7 @@
 						<span class="Channel-name Channel-txt u-displayblock u-center" id="streamerName"> 
 						</span>
 					</a>
-					<span class="Channel-stream-name Channel-txt u-displayblock u-center" id="gameName"></span>
+					<span class="Channel-stream-name Channel-txt u-displayblock u-center" id="streamName"></span>
 				</div>
 			</template>
 		</div>
