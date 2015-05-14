@@ -11,32 +11,16 @@
 			background-position: 50% 50%;
 			background-attachment: initial;
 			min-width: 400px;
-        	min-height: 205px;
-        	overflow-y: scroll;
-
+			min-height: 150px
 		}
-		.Container{
-			background-color: rgba(100, 0, 164, .5);
-		}
-		.Channel{
-			margin-bottom: 1em;
-		}
-		.Channel-name{
+		.Container-msg{
 			color: white;
 		}
-		.Channel-stream-name{
-			color: grey;
-			padding: 1em;
+		.Container-name{
+			color: #A5B525;
 		}
-		.Channel-txt{
-			font-size: 1.5em;
-		}
-		.Channel-logo{
-			width: 100px;
-		}
-		.Channel-logo-img{
-			border-radius: 50%;
-			width: 100%;
+		.Form{
+			background-color: rgba(88, 38, 97, 0.54);
 		}
 		.Form-input{
 			font-size: 2em;
@@ -45,10 +29,7 @@
 		.Form-submit{
 			font-size: 2em;
 		}
-		.Title{
-			color: #64459B;
-			font-size: 3em;
-		}
+		
 		.u-fontsize{
 			font-size: 1.5em
 		}
@@ -62,31 +43,17 @@
 	</style>
 </head>
 <body>
-	<header class="Header">
-		<h1 class="Title u-center">
-			Live Channels!
-		</h1>
-	</header>	
-	<section class="Container u-center">
-		<form action="" class="Form" >
-			<input type="text" placeholder="Twitch username" class="Form-input">
+
+	<div class="Container u-center">
+
+		<form action="" class="Form" id="Form">
+			<input type="text" placeholder="Twitch username" id="Input"class="Form-input">
 			<button class="Form-submit">Submit</button>
 		</form>
-		<div class="Channel">
-			<template id="myTemplate">
-				<figure class="Channel-logo u-center">
-					<img src="" alt="" class="Channel-logo-img">
-				</figure>
-				<div class="Channel-info">
-					<a id="channelLink">
-						<span class="Channel-name Channel-txt u-displayblock u-center" id="streamerName"> 
-						</span>
-					</a>
-					<span class="Channel-stream-name Channel-txt u-displayblock u-center" id="streamName"></span>
-				</div>
-			</template>
-		</div>
-	</section>
+		<span id="Message" class="Container-msg u-fontsize">Using the username</span>
+		<span id="Name" class="Container-name u-fontsize"></span>
+
+	</div>
 	<script src="libs/jquery.js"></script>
 	<script src="popup.js"></script>
 </body>
